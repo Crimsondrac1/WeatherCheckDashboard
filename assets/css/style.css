@@ -1,0 +1,54 @@
+* {
+    /* border: 1px solid blue; */
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+#inCity {
+    border: 1px solid rgb(89, 89, 89);
+    width: 90%;
+    /* size: 2rem; */
+
+}
+
+#sButton {
+    width: 100%;
+}
+
+.iSection {
+    border-bottom: 10px double #888888 ;
+    }
+
+.cityOutput {
+    font-family: 'Fredoka One', cursive;
+    /* text-decoration: wavy; */
+}
+
+#cWeath {
+    border-bottom: 2px solid #888888;
+}
+
+.fTitle {
+    font-family: 'Fredoka One', cursive;
+    margin-bottom: 10px;
+    /* text-decoration: wavy; */
+}
+
+.days {
+    /* display: flex;
+    flex-direction: row; */
+    font-size: 24px;
+    /* width: 10%;
+    height: 200px; */
+    background-color: rgb(0, 1, 76);
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+#cList {
+    border-radius: 15px;
+}
