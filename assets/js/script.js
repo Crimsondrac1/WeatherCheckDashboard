@@ -4,20 +4,29 @@ var city = document.querySelector('#inCity')
 var subCity = document.getElementById('inCity')
 // var modalOne = document.getElementsByClassName('modal')
 var list = document.getElementById('cList')
-var fromStorage = localStorage.getItem('Cities')
+var fromStorage = localStorage.getItem(subCity)
 
 function pageLoad () {
-    if (!fromStorage) {
+    if (localStorage.length < 1) {
         submitForm()
     }
     else { 
+        //var subCity = document.getElementById('inCity').value
         // for (let i = 1; i < fromStorage.length; i++) {
-        var storage = localStorage.getItem('Cities')
-        console.log('Storage>>> ' + storage)
+        //  var storage = localStorage.getItem(subCity)
+        //  console.log('Storage>>> ' + storage)
+        //  console.log("local storage");
+        //  for (i = 0; i < localStorage.length; i++)   {
+        //      console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
+         
+         
+// }
+
+        // }
 
         for(let i=0; i<localStorage.length; i++) {
             let key = localStorage.key(i);
-            // let keyVal = key[i]
+            let keyVal = `${key}`
             // alert(`${key}: ${localStorage.getItem(key)}`);
         //   }
         var elmt = document.createElement('div')
@@ -25,7 +34,7 @@ function pageLoad () {
         elmt.classList.add('is-size-3','has-background-grey','has-text-white','has-text-centered','is-vcentered','p-3','mb-3')
         elmt.id = key
         list.appendChild(elmt)
-        console.log(fromStorage)
+        console.log(keyVal)
         }
     }
 }
@@ -66,70 +75,10 @@ function submitForm() {
         elmt.id = subCity
         list.appendChild(elmt)
     // }
-        
-    
 }
 }
-//     $("#lanuchModal").click(function() {
-//     $(".modal").addClass("is-active"); 
-   
-//   });
-   
-   
-   
-   
     $(".modal-close").click(function() {
     $(".modal").removeClass("is-active");
    
   });
-
-// window.onload = function() {
-//     weathCheck(Houston,Tx)
-// }
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     // Functions to open and close a modal
-//     function openModal(modalOne) {
-//         modalOne.classList.add('is-active');
-//     }
-  
-//     function closeModal(modalOne) {
-//         modalOne.classList.remove('is-active');
-//     }
-  
-//     function closeAllModals() {
-//       (document.querySelectorAll('.modal') || []).forEach(($modal) => {
-//         closeModal($modal);
-//       });
-//     }
-  
-//     // Add a click event on buttons to open a specific modal
-//     // (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
-//     //   const modal = $trigger.dataset.target;
-//     //   const $target = document.getElementById(modal);
-//     //   console.log($target);
-  
-//     //   $trigger.addEventListener('click', () => {
-//     //     openModal($target);
-//     //   });
-//     // });
-  
-//     // Add a click event on various child elements to close the parent modal
-//     (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
-//       const $target = $close.closest('.modal');
-  
-//       $close.addEventListener('click', () => {
-//         closeModal($target);
-//       });
-//     });
-  
-//     // Add a keyboard event to close all modals
-//     document.addEventListener('keydown', (event) => {
-//       const e = event || window.event;
-  
-//       if (e.keyCode === 27) { // Escape key
-//         closeAllModals();
-//       }
-//     });
-//   });
 pageLoad()
