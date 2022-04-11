@@ -19,7 +19,7 @@
 
       <body>
           <main class="columns is-centered mt-1">
-              <h1 class="column is-12 container has-text-centered is-size-1 is-vcentered">Weather Check Dashboard</h1>
+              <h1 class="column is-12 container has-text-centered is-size-1 is-vcentered pb-5">Weather Check Dashboard</h1>
           </main>
 
 
@@ -44,40 +44,34 @@
           <div class="column mt-5 is-12 is-multiline is-fullwidth control" id="col2">
             <section class="curWeath" id="cWeath">
             <div class="column is-12 is-size-2 is-vcentered"  id="cityDisplay">
-                <p class="cityOutput">City Here</p>
+                <p class="cityOutput" id="cName"></p>
+                <p class="wIcon" id="wIcon"></p>
             </div>
             <div class="column is-12 is-size-4"  id="wDetails">
               <p class="temp" id="cTemp">Temp:</p>
               <p class="wind" id="cWind">Wind:</p>
               <p class="humidity" id="cHumidity">Humidity:</p>
-              <pv class="uv" id="cUV">UV Index:</p>
+              <pv class="uv cUV" id="cUV">UV Index:</p>
             </div>
             </section>
 
-            <section class="columns forecast" id="fCast">
+            <section class="columns forecast mx-5" id="fCast">
                 <div class="column is-8">
                 <p class="is-size-3 fTitle">5-Day Forecast:</p>
                 
                 <div class="columns"> 
-                    <div class="column is-one-fifths days" id="d1">One</div>
-                    <div class="column is-one-fifths days" id="d2">Two</div>
-                    <div class="column is-one-fifths days" id="d3">Three</div>
-                    <div class="column is-one-fifths days" id="d4">Four</div>
-                    <div class="column is-one-fifths days" id="d5">Five</div>
+                    <div class="column is-one-fifths days" id="d1"></div>
+                    <div class="column is-one-fifths days" id="d2"></div>
+                    <div class="column is-one-fifths days" id="d3"></div>
+                    <div class="column is-one-fifths days" id="d4"></div>
+                    <div class="column is-one-fifths days" id="d5"></div>
                 </div>
                 </div>
-
             </section>
-
-          </div>
-          
+          </div>          
       </div>
-      
-
             <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
             <script src="./assets/js/script.js"></script>
-      
-
        </body>
       </html>
